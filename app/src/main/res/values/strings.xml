@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Math</string>
+    <string name="submit_button">submit</string>
+    <string name="answer_hint">answer</string>
+</resources>
