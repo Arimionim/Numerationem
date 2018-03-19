@@ -7,9 +7,10 @@ import java.util.Random;
 import static java.lang.Math.max;
 
 class Task {
-    private static final int ADD_SUB_POINT = 30;
-    private static final int MUL_POINT = 50;
-    public static final int MUL_POINT_DIVIDER = 5;
+    static final int ADD_SUB_POINT = 20;
+    private static final int MUL_POINT = 30;
+    private static final int MUL_POINT_DIVIDER = 8;
+    private static final int RANDOM_MULTIPLIER = 5;
     private int point;
     private int answer;
     private String task;
@@ -39,7 +40,7 @@ class Task {
 
         switch (type) {
             case "number":
-                answer = random.nextInt((point + 1) * 10) + 1;
+                answer = random.nextInt((point + 1) * RANDOM_MULTIPLIER) + 1;
                 task = answer + "";
                 return;
             case "add":
@@ -72,7 +73,7 @@ class Task {
             task = left.getTask() + task;
         }
 
-        if (right.type != "mul" && right.type != "number" && type != "add" && type != "sub"){
+        if (right.type != "mul" && right.type != "number" && type != "add" && (type != "sub" || right.type == "sub" || right.type == "add")){
             task = task + "(" + right.getTask() + ")";
         }
         else{

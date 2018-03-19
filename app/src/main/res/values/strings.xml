@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">Math</string>
+    <string name="app_name">Calculation</string>
     <string name="submit_button">submit</string>
-    <string name="answer_hint">answer</string>
+    <string name="skip">skip</string>
+    <string name="default_hint">Answer</string>
+    <string name="mistake_hint">"Mistake"</string>
+    <string name="empty_input_hint">Type something!</string>
+    <string name="success_hint">Right</string>
+    <string name="level">Level:</string>
 </resources>
